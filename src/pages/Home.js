@@ -7,6 +7,7 @@ import {
 	IconButton,
 	Link
 } from '@mui/material';
+import ApexChart from '../components/ApexChart';
 // import BackgroundImage from '../assets/images/background.png';
 import GooglePlusIcon from '../assets/images/Google+.svg';
 import FacebookIcon from '../assets/images/Facebook.svg';
@@ -229,8 +230,9 @@ const Home = () => {
 							alt=""
 							sx={{ width: { xs: 240, md: 300} }}									
 						/>
-					</Box>					
-					<Typography
+					</Box>
+					<ApexChart />
+					<Typography id="about"
 						variant='h4'
 						textAlign="center"
 						sx={{
@@ -240,7 +242,8 @@ const Home = () => {
 							textTransform: 'uppercase',
 							color: '#E19531',
 							mx: 'auto',
-							mb: '50px'
+							mb: '50px',
+							mt: '50px',
 						}}
 					>
 						Little brother of dogecoin
@@ -265,7 +268,8 @@ const Home = () => {
 							)
 						)}
 					</Box>
-					<Typography
+					<Typography 
+						id="tokenmetrics"
 						variant='h2'
 						textAlign="center"
 						sx={{

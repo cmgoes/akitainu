@@ -6,16 +6,17 @@ import Home from './pages/Home';
 function App() {
   return (
     <Fragment>
-      <Router>
+      {/* <Router> */}
         <Header />
-        <Switch>
-          <Route
+        <Home/>
+        {/* <Switch> */}
+          {/* <Route
             path="/home"
             component={Home}
           />          
           <Redirect from='/' to='/home' />
-        </Switch>
-      </Router>
+        </Switch> */}
+      {/* </Router> */}
     </Fragment>
   );
 }

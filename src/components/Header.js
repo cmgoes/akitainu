@@ -72,6 +72,7 @@ export default function ButtonAppBar() {
 								sx={{
 									display: 'none',
 									justifyContent: 'flex-start',
+									alignItems: 'center',
 									"@media (min-width: 1024px)": {
 										display: 'flex'
 									}
@@ -80,21 +81,24 @@ export default function ButtonAppBar() {
 								<Button 
 									className={classes.menuButton}
 									sx={{ mr: {md: '10px', lg: '24px'} }}
-									onClick={() => history.push('/home')}
+									// onClick={() => history.push('/home')}
+									href="/"
 								>
 									Home
 								</Button>
 								<Button 
 									className={classes.menuButton}
 									sx={{ mr: {md: '10px', lg: '24px'} }}
-									onClick={() => history.push('/about')}
+									// onClick={() => history.push('/#about')}
+									href="#about"
 								>
 									About
 								</Button>
 								<Button 
 									className={classes.menuButton}
 									sx={{ mr: {md: '10px', lg: '24px'} }}
-									onClick={() => history.push('/tokenmetrics')}
+									// onClick={() => history.push('/#tokenmetrics')}
+									href="#tokenmetrics"
 								>
 									Tokenmetrics
 								</Button>
