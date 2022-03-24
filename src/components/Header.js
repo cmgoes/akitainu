@@ -6,11 +6,12 @@ import {
     Toolbar,
     Button,    
     IconButton,   
+		Link,
     Container,  
     List,
     ListItem
 } from '@mui/material';
-import { useHistory } from 'react-router-dom';
+// import { useHistory } from 'react-router-dom';
 import MenuIcon from '@mui/icons-material/Menu';
 
 import CloseOutlinedIcon from '@mui/icons-material/CloseOutlined';
@@ -34,7 +35,8 @@ const useStyles = makeStyles(theme => ({
 	},
 	mobileListItem: {
 		fontSize: '20px!important',
-		color: '#000000cc!important',
+		color: '#ffffff!important',
+		textDecoration: 'none',
 		textTransform: 'capitalize!important',
 		marginBottom: '8px!important'
 	}
@@ -42,7 +44,7 @@ const useStyles = makeStyles(theme => ({
 
 export default function ButtonAppBar() {
 	const classes = useStyles();
-	const history = useHistory();    
+	// const history = useHistory();    
 	const [mobileDrawer, setMobileDrawer] = useState(false);    
 
 	return (
@@ -146,7 +148,7 @@ export default function ButtonAppBar() {
 					right: 0,
 					bottom: 0,
 					overflow: 'auto',
-					backgroundColor: '#fff',
+					backgroundColor: '#111111',
 					minWidth: 280,
 					padding: { xs: '24px 16px', sm: '24px' },
 					zIndex: 2000,
@@ -160,30 +162,33 @@ export default function ButtonAppBar() {
 					py: { xs: '2px', sm: '10px' }
 				}}>
 					<IconButton onClick={() => setMobileDrawer(false)}>
-						<CloseOutlinedIcon />
+						<CloseOutlinedIcon sx={{color: '#ffffff'}}/>
 					</IconButton>
 				</Box>
 				<List sx={{
 						mb: '20px'
 				}}>
 					<ListItem
-						component={Button}
+						component={Link}
 						className={classes.mobileListItem}
-						onClick={() => history.push('/home')}
+						// onClick={() => history.push('/home')}
+						href="/"
 					>
 						Home
 					</ListItem>
 					<ListItem
-						component={Button}
+						component={Link}
 						className={classes.mobileListItem}
-						onClick={() => history.push('/about')}
+						// onClick={() => history.push('/about')}
+						href="#about"
 					>
 						About
 					</ListItem>
 					<ListItem
-						component={Button}
+						component={Link}
 						className={classes.mobileListItem}
-						onClick={() => history.push('/tokenmetrics')}
+						// onClick={() => history.push('/tokenmetrics')}
+						href="#tokenmetrics"
 					>
 						Tokenmetrics
 					</ListItem>                    
